@@ -1,0 +1,4 @@
+addition
+from
+mylist
+777
