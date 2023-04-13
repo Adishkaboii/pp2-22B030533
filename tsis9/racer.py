@@ -1,5 +1,4 @@
-import pygame, sys
-from pygame.locals 
+import pygame
 import random, time
 
 pygame.init()
@@ -52,10 +51,10 @@ class Player(pygame.sprite.Sprite):
     def move(self):
         pressed_keys = pygame.key.get_pressed()
         if self.rect.left > 0:
-              if pressed_keys[K_LEFT]:
+              if pressed_keys[pygame.K_LEFT]:
                   self.rect.move_ip(-5, 0)
         if self.rect.right < SCREEN_WIDTH:        
-              if pressed_keys[K_RIGHT]:
+              if pressed_keys[pygame.K_RIGHT]:
                   self.rect.move_ip(5, 0)
 class Coin(pygame.sprite.Sprite):
     def __init__(self):
@@ -98,7 +97,7 @@ while True:
     for event in pygame.event.get():
         if event.type == INC_SPEED:
               SPEED += 0.5      
-        if event.type == QUIT:
+        if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
     money = font_small.render(str(COIN),True,RED)
