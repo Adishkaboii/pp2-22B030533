@@ -13,7 +13,8 @@ class Square(Shape):
     def area(self):
         print(self.len*self.len)
 
+a = int(input())
 s = Shape()
 s.area()
-y = Square(5)
+y = Square(a)
 y.area()
