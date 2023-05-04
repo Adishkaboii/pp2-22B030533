@@ -14,5 +14,7 @@ class Rectangle(Shape):
     def area(self):
         print(self.width*self.length)
 
-z = Rectangle(4,5)
+a = int(input())
+b = int(input())
+z = Rectangle(a, b)
 z.area()
